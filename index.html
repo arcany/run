@@ -23,7 +23,7 @@
 			
 			// Decoupe la chaine pour trouver le nom a afficher dans le chat
 			const params = new URLSearchParams(queryString);
-			const name = parseInt(params.get("nom"));
+			const name = params.get("nom");
 
 			// Partie RingCentral
 			var _chatq = _chatq || [];
