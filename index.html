@@ -18,8 +18,9 @@
 			}(document));
 		</script>
 		<script>
+			var name = decodeURI( $_GET( 'nom' ) );
 			var _chatq = _chatq || [];
-			_chatq.push(["_setIdentity", {"screenname":"Jane Doe"}]);
+			_chatq.push(["_setIdentity", {"screenname":nom}]);
 		</script>
 	</head>
 	<body>
