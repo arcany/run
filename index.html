@@ -18,9 +18,16 @@
 			}(document));
 		</script>
 		<script>
-			var name = decodeURI( $_GET( 'nom' ) );
+			// Recupere la partie variable de l'URL courante
+			const queryString = window.location.search // Returns:'?nom=xxx'
+			
+			// Decoupe la chaine pour trouver le nom a afficher dans le chat
+			const params = new URLSearchParams(queryString);
+			const name = parseInt(params.get("nom"));
+
+			// Partie RingCentral
 			var _chatq = _chatq || [];
-			_chatq.push(["_setIdentity", {"screenname":nom}]);
+			_chatq.push(["_setIdentity", {"screenname":name}]);
 		</script>
 	</head>
 	<body>
